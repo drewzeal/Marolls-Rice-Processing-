@@ -187,53 +187,41 @@ a{
   background:#f5e8d6;
   color:var(--red)
 }
-
  =========================================================
-   HERO SECTION
-   ========================================================= */
-
-/* =========================================================
-   MAROLLS HERO
+   MAROLLS HERO — CLEAN RESPONSIVE VERSION
    ========================================================= */
 
 .hero {
   position: relative;
+  width: 100%;
   overflow: hidden;
 
+  padding: 70px 0 80px;
+
   background:
-    radial-gradient(
-      circle at 75% 25%,
-      #ef3d2e 0%,
-      transparent 35%
-    ),
     linear-gradient(
       135deg,
       #650000 0%,
-      #b90808 55%,
-      #e21a16 100%
+      #a80707 55%,
+      #d71916 100%
     );
 
-  padding: 110px 0 70px;
+  color: #ffffff;
 }
 
 .hero::after {
   content: "";
   position: absolute;
 
-  left: -10%;
-  right: -10%;
+  left: -5%;
+  right: -5%;
   bottom: -25%;
 
   height: 45%;
 
-  background:
-    linear-gradient(
-      180deg,
-      transparent,
-      rgba(69, 0, 0, .45)
-    );
+  background: rgba(55, 0, 0, .28);
 
-  transform: skewY(-5deg);
+  transform: skewY(-4deg);
 
   pointer-events: none;
 }
@@ -247,17 +235,17 @@ a{
   position: relative;
   z-index: 2;
 
-  width: min(1200px, calc(100% - 48px));
+  width: min(1180px, 92%);
 
   margin: 0 auto;
 
   display: grid;
 
-  grid-template-columns: 1fr 1fr;
-
-  gap: 55px;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
 
   align-items: center;
+
+  gap: 50px;
 }
 
 
@@ -266,38 +254,47 @@ a{
    ========================================================= */
 
 .hero-copy {
-  color: #fff;
+  min-width: 0;
 }
 
 .kicker {
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 
   color: #f7d36d;
 
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
   font-size: 12px;
 
-  font-weight: 900;
+  font-weight: 800;
 
-  letter-spacing: .16em;
+  letter-spacing: .13em;
 
   text-transform: uppercase;
 }
 
 .hero h1 {
-  margin: 0 0 24px;
+  margin: 0 0 22px;
 
-  color: #fff;
+  max-width: 650px;
+
+  color: #ffffff;
 
   font-family:
     Georgia,
     "Times New Roman",
     serif;
 
-  font-size: clamp(52px, 6vw, 82px);
+  font-size: clamp(48px, 5.5vw, 76px);
 
-  line-height: .94;
+  font-weight: 700;
 
-  letter-spacing: -.045em;
+  line-height: .98;
+
+  letter-spacing: -.025em;
 }
 
 .hero h1 span {
@@ -307,26 +304,29 @@ a{
 }
 
 .hero p {
-  max-width: 600px;
+  max-width: 570px;
 
   margin: 0;
 
-  color: #ffe8df;
+  color: rgba(255,255,255,.88);
 
-  font-size: 18px;
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
 
-  line-height: 1.6;
+  font-size: 17px;
+
+  line-height: 1.65;
 }
 
 
 /* =========================================================
-   HERO BUTTON
+   SHOP BUTTON
    ========================================================= */
 
 .cta {
-  display: flex;
-
-  margin-top: 30px;
+  margin-top: 28px;
 }
 
 .cart-shop {
@@ -337,30 +337,31 @@ a{
 
   gap: 9px;
 
-  padding: 15px 26px;
+  min-height: 50px;
 
-  border: none;
+  padding: 14px 24px;
 
   border-radius: 999px;
 
-  background: var(--gold);
+  background: #f0bd32;
 
   color: #2d1800;
 
-  font-weight: 900;
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 15px;
+
+  font-weight: 800;
 
   text-decoration: none;
 
-  transition:
-    transform .2s ease,
-    box-shadow .2s ease;
-}
-
-.cart-shop:hover {
-  transform: translateY(-2px);
+  border: 0;
 
   box-shadow:
-    0 12px 30px rgba(0,0,0,.2);
+    0 8px 22px rgba(0,0,0,.18);
 }
 
 .cart-shop svg {
@@ -374,6 +375,7 @@ a{
   stroke-width: 2;
 
   stroke-linecap: round;
+
   stroke-linejoin: round;
 }
 
@@ -385,27 +387,32 @@ a{
 .hero-card {
   width: 100%;
 
-  height: 430px;
+  height: auto;
 
   overflow: hidden;
 
-  border-radius: 28px;
+  border-radius: 24px;
 
   border: 1px solid rgba(255,255,255,.35);
 
   background: #8d0909;
 
   box-shadow:
-    0 25px 70px rgba(0,0,0,.30);
+    0 22px 55px rgba(0,0,0,.28);
 }
 
 .hero-card img {
   display: block;
 
   width: 100%;
-  height: 100%;
 
-  object-fit: cover;
+  height: auto;
+
+  max-width: 100%;
+
+  /* IMPORTANT:
+     Do NOT crop the image */
+  object-fit: contain;
 
   object-position: center;
 }
@@ -418,7 +425,7 @@ a{
 @media (max-width: 900px) {
 
   .hero {
-    padding: 100px 0 60px;
+    padding: 55px 0 60px;
   }
 
   .hero-inner {
@@ -426,19 +433,21 @@ a{
 
     grid-template-columns: 1fr;
 
-    gap: 30px;
+    gap: 35px;
   }
 
   .hero-card {
-    height: 360px;
+    order: 1;
+
+    width: 100%;
   }
 
   .hero-copy {
     order: 2;
   }
 
-  .hero-card {
-    order: 1;
+  .hero h1 {
+    font-size: clamp(44px, 8vw, 62px);
   }
 }
 
@@ -450,31 +459,50 @@ a{
 @media (max-width: 700px) {
 
   .hero {
-    padding: 85px 0 45px;
+    width: 100%;
+
+    padding: 28px 0 48px;
   }
 
   .hero-inner {
-    width: 92%;
+    width: 100%;
+
+    margin: 0;
 
     display: flex;
 
     flex-direction: column;
 
-    gap: 25px;
+    gap: 26px;
   }
 
   .hero-card {
     order: 1;
 
-    height: 280px;
+    width: 100%;
 
-    border-radius: 20px;
+    border-radius: 0;
+
+    border-left: 0;
+    border-right: 0;
+  }
+
+  .hero-card img {
+    width: 100%;
+
+    height: auto;
+
+    max-width: 100%;
+
+    object-fit: contain;
   }
 
   .hero-copy {
     order: 2;
 
     width: 100%;
+
+    padding: 0 24px;
   }
 
   .kicker {
@@ -482,20 +510,28 @@ a{
 
     font-size: 10px;
 
-    letter-spacing: .12em;
+    letter-spacing: .11em;
   }
 
   .hero h1 {
+    max-width: 100%;
+
     margin-bottom: 18px;
 
-    font-size: 46px;
+    font-size: 48px;
 
-    line-height: .95;
+    line-height: 1.02;
 
-    letter-spacing: -.035em;
+    letter-spacing: -.02em;
+  }
+
+  .hero h1 span {
+    display: block;
   }
 
   .hero p {
+    max-width: 100%;
+
     font-size: 16px;
 
     line-height: 1.55;
@@ -506,6 +542,8 @@ a{
   }
 
   .cart-shop {
+    min-height: 48px;
+
     padding: 13px 22px;
 
     font-size: 14px;
@@ -520,26 +558,24 @@ a{
 @media (max-width: 480px) {
 
   .hero {
-    padding-top: 80px;
+    padding-top: 24px;
   }
 
-  .hero-inner {
-    width: 92%;
-  }
-
-  .hero-card {
-    height: 250px;
+  .hero-copy {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .hero h1 {
-    font-size: 43px;
+    font-size: 42px;
+
+    line-height: 1.02;
   }
 
   .hero p {
-    font-size: 15.5px;
+    font-size: 15px;
   }
 }
-
 
 /* GALLERY */
 
