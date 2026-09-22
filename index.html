@@ -195,68 +195,38 @@ a{
    MAROLLS HERO
    ========================================================= */
 
+/* =========================================================
+   MAROLLS HERO
+   ========================================================= */
+
 .hero {
   position: relative;
   width: 100%;
   overflow: hidden;
 
-  padding: 76px 0 90px;
+  background: linear-gradient(
+    135deg,
+    #520000 0%,
+    #760000 55%,
+    #980707 100%
+  );
 
-  background:
-    linear-gradient(
-      135deg,
-      #570000 0%,
-      #780000 48%,
-      #a40808 100%
-    );
+  color: #fff;
 
-  color: #ffffff;
+  padding: 72px 0 85px;
 }
 
 
 /* =========================================================
-   DECORATIVE BOTTOM
-   ========================================================= */
-
-.hero::after {
-  content: "";
-
-  position: absolute;
-
-  left: -5%;
-  right: -5%;
-  bottom: -110px;
-
-  height: 170px;
-
-  background: #fbf5e9;
-
-  transform: rotate(-4deg);
-
-  transform-origin: center;
-
-  pointer-events: none;
-}
-
-
-/* =========================================================
-   MAIN HERO CONTAINER
+   HERO INNER
    ========================================================= */
 
 .hero-inner {
-  position: relative;
-
-  z-index: 2;
-
   width: min(1180px, 92%);
-
   margin: 0 auto;
 
   display: grid;
-
-  grid-template-columns:
-    minmax(0, 1fr)
-    minmax(0, 1fr);
+  grid-template-columns: 1fr 1fr;
 
   align-items: center;
 
@@ -269,10 +239,6 @@ a{
    ========================================================= */
 
 .hero-copy {
-  position: relative;
-
-  z-index: 3;
-
   min-width: 0;
 }
 
@@ -282,48 +248,44 @@ a{
    ========================================================= */
 
 .kicker {
-  margin-bottom: 15px;
+  margin-bottom: 14px;
 
   color: #f5ce55;
 
-  font-family:
-    Arial,
-    Helvetica,
-    sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 
   font-size: 12px;
-
   font-weight: 800;
 
-  letter-spacing: .14em;
+  letter-spacing: .12em;
 
   text-transform: uppercase;
 }
 
 
 /* =========================================================
-   HERO HEADING
+   HEADING
    ========================================================= */
 
 .hero h1 {
-  margin: 0 0 24px;
+  margin: 0 0 22px;
 
-  max-width: 650px;
-
-  color: #ffffff;
+  max-width: 620px;
 
   font-family:
     Georgia,
     "Times New Roman",
     serif;
 
-  font-size: clamp(48px, 5.4vw, 76px);
+  font-size: clamp(48px, 5vw, 74px);
 
   font-weight: 700;
 
   line-height: .98;
 
   letter-spacing: -.025em;
+
+  color: #fff;
 }
 
 .hero h1 span {
@@ -334,11 +296,11 @@ a{
 
 
 /* =========================================================
-   HERO DESCRIPTION
+   DESCRIPTION
    ========================================================= */
 
 .hero p {
-  max-width: 590px;
+  max-width: 580px;
 
   margin: 0;
 
@@ -351,16 +313,16 @@ a{
 
   font-size: 17px;
 
-  line-height: 1.65;
+  line-height: 1.6;
 }
 
 
 /* =========================================================
-   SHOP BUTTON
+   CTA
    ========================================================= */
 
 .cta {
-  margin-top: 28px;
+  margin-top: 27px;
 }
 
 
@@ -368,27 +330,22 @@ a{
   display: inline-flex;
 
   align-items: center;
-
   justify-content: center;
 
   gap: 10px;
 
-  min-width: 155px;
+  min-width: 150px;
+  min-height: 50px;
 
-  min-height: 52px;
-
-  padding: 14px 24px;
+  padding: 13px 24px;
 
   border-radius: 999px;
 
-  background: #f4c63d;
+  background: #f5c83d;
 
   color: #261500;
 
-  font-family:
-    Arial,
-    Helvetica,
-    sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 
   font-size: 15px;
 
@@ -396,26 +353,22 @@ a{
 
   text-decoration: none;
 
-  box-shadow:
-    0 10px 25px rgba(0,0,0,.2);
+  box-shadow: 0 8px 22px rgba(0,0,0,.2);
 
   transition:
     transform .2s ease,
     box-shadow .2s ease;
 }
 
-
 .hero-shop-btn:hover {
   transform: translateY(-2px);
 
   box-shadow:
-    0 14px 30px rgba(0,0,0,.28);
+    0 12px 28px rgba(0,0,0,.28);
 }
-
 
 .hero-shop-btn svg {
   width: 21px;
-
   height: 21px;
 
   fill: none;
@@ -425,25 +378,20 @@ a{
   stroke-width: 2;
 
   stroke-linecap: round;
-
   stroke-linejoin: round;
 }
 
 
 /* =========================================================
-   HERO BENEFITS
+   BENEFITS
    ========================================================= */
 
 .hero-benefits {
   display: flex;
 
-  align-items: center;
-
-  gap: 0;
-
-  margin-top: 38px;
-
   max-width: 570px;
+
+  margin-top: 34px;
 }
 
 
@@ -452,52 +400,42 @@ a{
 
   align-items: center;
 
-  gap: 10px;
+  gap: 9px;
 
   flex: 1;
 
-  min-width: 0;
+  padding: 0 17px;
 
-  padding: 0 18px;
+  color: rgba(255,255,255,.9);
 
-  color: rgba(255,255,255,.92);
+  font-family: Arial, Helvetica, sans-serif;
 
-  font-family:
-    Arial,
-    Helvetica,
-    sans-serif;
-
-  font-size: 13px;
+  font-size: 12px;
 
   line-height: 1.3;
 }
-
 
 .hero-benefit:first-child {
   padding-left: 0;
 }
 
-
 .hero-benefit + .hero-benefit {
   border-left: 1px solid rgba(245,206,85,.55);
 }
 
-
 .hero-benefit svg {
   flex: 0 0 auto;
 
-  width: 30px;
-
-  height: 30px;
+  width: 28px;
+  height: 28px;
 
   fill: none;
 
-  stroke: #ffffff;
+  stroke: #fff;
 
   stroke-width: 1.7;
 
   stroke-linecap: round;
-
   stroke-linejoin: round;
 }
 
@@ -507,30 +445,24 @@ a{
    ========================================================= */
 
 .hero-card {
-  position: relative;
-
-  z-index: 2;
-
   width: 100%;
 
   overflow: hidden;
 
-  border-radius: 26px;
+  border-radius: 25px;
 
-  border: 1px solid rgba(255,255,255,.3);
+  border: 1px solid rgba(255,255,255,.25);
 
-  background: #8d0909;
+  background: #700000;
 
   box-shadow:
-    0 25px 65px rgba(0,0,0,.3);
+    0 25px 60px rgba(0,0,0,.28);
 }
-
 
 .hero-card img {
   display: block;
 
   width: 100%;
-
   height: auto;
 
   max-width: 100%;
@@ -543,13 +475,7 @@ a{
 
 @media (max-width: 900px) {
 
-  .hero {
-    padding: 60px 0 80px;
-  }
-
   .hero-inner {
-    width: 92%;
-
     grid-template-columns: 1fr;
 
     gap: 35px;
@@ -562,52 +488,41 @@ a{
   .hero-copy {
     order: 2;
   }
-
-  .hero h1 {
-    font-size: 58px;
-  }
 }
 
 
 /* =========================================================
-   MOBILE HERO
+   MOBILE
    ========================================================= */
 
 @media (max-width: 700px) {
 
   .hero {
+    /*
+      IMPORTANT:
+      No pseudo-element.
+      No cream.
+      No slant.
+      Full-width burgundy section.
+    */
+
     width: 100%;
 
-    min-height: 0;
+    margin: 0;
 
-    padding:
-      34px
-      0
-      105px;
-
-    /*
-      Entire mobile Hero is burgundy.
-      No image.
-    */
+    padding: 38px 0 48px;
 
     background:
       linear-gradient(
         145deg,
-        #4e0000 0%,
-        #720000 48%,
-        #970707 100%
+        #520000 0%,
+        #760000 55%,
+        #980707 100%
       );
   }
 
 
-  /* Hide desktop image completely */
-
-  .hero-card {
-    display: none;
-  }
-
-
-  /* Full-width mobile content */
+  /* Full-width hero */
 
   .hero-inner {
     display: block;
@@ -618,36 +533,48 @@ a{
   }
 
 
+  /* Hide desktop image */
+
+  .hero-card {
+    display: none;
+  }
+
+
+  /* Text container */
+
   .hero-copy {
     width: 100%;
 
-    padding:
-      0
-      24px;
+    padding-left: 22px;
+    padding-right: 22px;
+
+    box-sizing: border-box;
   }
 
 
   /* Kicker */
 
   .kicker {
-    margin-bottom: 13px;
+    margin-bottom: 11px;
 
-    font-size: 10px;
+    font-size: 9px;
 
-    letter-spacing: .12em;
+    letter-spacing: .11em;
 
     line-height: 1.4;
   }
 
 
-  /* Mobile headline */
+  /* MOBILE HEADLINE */
 
   .hero h1 {
+    width: 100%;
+
     max-width: 100%;
 
     margin: 0 0 20px;
 
-    font-size: 43px;
+    font-size: 42px;
 
     line-height: 1.02;
 
@@ -662,56 +589,60 @@ a{
   }
 
 
-  /* Mobile paragraph */
+  /* MOBILE DESCRIPTION */
 
   .hero p {
+    width: 100%;
+
     max-width: 100%;
 
     margin: 0;
 
-    color: rgba(255,255,255,.88);
+    font-size: 15px;
 
-    font-size: 16px;
+    line-height: 1.55;
 
-    line-height: 1.58;
+    color: rgba(255,255,255,.9);
   }
 
 
-  /* Mobile button */
+  /* BUTTON */
 
   .cta {
-    margin-top: 24px;
+    margin-top: 25px;
   }
 
 
   .hero-shop-btn {
-    min-width: 150px;
+    min-width: 145px;
 
-    min-height: 49px;
+    min-height: 48px;
 
-    padding: 13px 22px;
+    padding: 12px 21px;
 
     font-size: 14px;
   }
 
 
-  /* Mobile benefits */
+  /* BENEFITS */
 
   .hero-benefits {
     width: 100%;
 
-    margin-top: 34px;
+    max-width: 100%;
+
+    margin-top: 31px;
 
     display: flex;
   }
 
 
   .hero-benefit {
-    gap: 7px;
+    gap: 6px;
 
-    padding: 0 10px;
+    padding: 0 9px;
 
-    font-size: 11px;
+    font-size: 10px;
   }
 
 
@@ -721,93 +652,70 @@ a{
 
 
   .hero-benefit svg {
-    width: 25px;
-
-    height: 25px;
+    width: 23px;
+    height: 23px;
   }
 
 
-  /*
-     Slanted cream transition
-     from Hero into next section
-  */
-
-  .hero::after {
-    bottom: -85px;
-
-    height: 125px;
-
-    transform: rotate(-4deg);
+  .hero-benefit + .hero-benefit {
+    border-left:
+      1px solid rgba(245,206,85,.5);
   }
 }
 
 
 /* =========================================================
-   SMALL PHONES
+   SMALL MOBILE
    ========================================================= */
 
 @media (max-width: 480px) {
 
   .hero {
-    padding-top: 30px;
+    padding-top: 32px;
 
-    padding-bottom: 95px;
+    padding-bottom: 42px;
   }
 
 
   .hero-copy {
     padding-left: 20px;
-
     padding-right: 20px;
   }
 
 
   .hero h1 {
-    font-size: 39px;
+    font-size: 38px;
 
-    line-height: 1.03;
+    line-height: 1.04;
   }
 
 
   .hero p {
-    font-size: 15px;
+    font-size: 14.5px;
 
     line-height: 1.55;
   }
 
 
-  .hero-shop-btn {
-    min-width: 145px;
-
-    min-height: 47px;
-
-    font-size: 14px;
-  }
-
-
   .hero-benefits {
-    margin-top: 30px;
+    margin-top: 28px;
   }
 
 
   .hero-benefit {
-    gap: 5px;
+    padding-left: 6px;
+    padding-right: 6px;
 
-    padding-left: 7px;
-
-    padding-right: 7px;
-
-    font-size: 10px;
+    font-size: 9.5px;
   }
 
 
   .hero-benefit svg {
-    width: 22px;
-
-    height: 22px;
+    width: 21px;
+    height: 21px;
   }
 }
-    
+
 /* GALLERY */
 
 .marquee{
