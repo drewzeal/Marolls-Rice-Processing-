@@ -96,6 +96,28 @@ a{
   color:var(--gold);
   font-weight:800
 }
+.brand-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.brand-logo img {
+  width: 72px;
+  height: 72px;
+  display: block;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+@media (max-width: 700px) {
+  .brand-logo img {
+    width: 56px;
+    height: 56px;
+  }
+}
 
 .nav-actions{
   display:flex;
@@ -1039,7 +1061,7 @@ h2{
 
   <a href="#home" class="brand-logo" aria-label="Marolls Rice Processing Ltd">
   <img
-    src="marolls-logo-circular.png"
+    src="marolls-rice-logo.png"
     alt="Marolls Rice"
     width="90"
     height="90"
