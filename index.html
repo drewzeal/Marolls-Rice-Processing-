@@ -188,26 +188,21 @@ a{
   color:var(--red)
 }
 
-/* HERO */
-/* =====================================================
-   HERO
-   ===================================================== */
+ =========================================================
+   HERO SECTION
+   ========================================================= */
 
 /* =========================================================
-   HERO SECTION
+   MAROLLS HERO
    ========================================================= */
 
 .hero {
   position: relative;
   overflow: hidden;
 
-  min-height: auto;
-  padding-top: 110px;
-  padding-bottom: 70px;
-
   background:
     radial-gradient(
-      circle at 72% 30%,
+      circle at 75% 25%,
       #ef3d2e 0%,
       transparent 35%
     ),
@@ -217,9 +212,10 @@ a{
       #b90808 55%,
       #e21a16 100%
     );
+
+  padding: 110px 0 70px;
 }
 
-/* Decorative background */
 .hero::after {
   content: "";
   position: absolute;
@@ -228,13 +224,13 @@ a{
   right: -10%;
   bottom: -25%;
 
-  height: 48%;
+  height: 45%;
 
   background:
     linear-gradient(
       180deg,
       transparent,
-      rgba(69, 0, 0, 0.45)
+      rgba(69, 0, 0, .45)
     );
 
   transform: skewY(-5deg);
@@ -244,7 +240,7 @@ a{
 
 
 /* =========================================================
-   HERO INNER
+   HERO LAYOUT
    ========================================================= */
 
 .hero-inner {
@@ -262,8 +258,6 @@ a{
   gap: 55px;
 
   align-items: center;
-
-  min-height: 560px;
 }
 
 
@@ -272,10 +266,7 @@ a{
    ========================================================= */
 
 .hero-copy {
-  position: relative;
-  z-index: 3;
-
-  color: #ffffff;
+  color: #fff;
 }
 
 .kicker {
@@ -284,6 +275,7 @@ a{
   color: #f7d36d;
 
   font-size: 12px;
+
   font-weight: 900;
 
   letter-spacing: .16em;
@@ -294,7 +286,7 @@ a{
 .hero h1 {
   margin: 0 0 24px;
 
-  color: #ffffff;
+  color: #fff;
 
   font-family:
     Georgia,
@@ -305,7 +297,7 @@ a{
 
   line-height: .94;
 
-  letter-spacing: -0.045em;
+  letter-spacing: -.045em;
 }
 
 .hero h1 span {
@@ -334,10 +326,6 @@ a{
 .cta {
   display: flex;
 
-  gap: 12px;
-
-  flex-wrap: wrap;
-
   margin-top: 30px;
 }
 
@@ -347,9 +335,7 @@ a{
   align-items: center;
   justify-content: center;
 
-  gap: 10px;
-
-  min-height: 52px;
+  gap: 9px;
 
   padding: 15px 26px;
 
@@ -374,12 +360,12 @@ a{
   transform: translateY(-2px);
 
   box-shadow:
-    0 12px 30px rgba(0, 0, 0, .2);
+    0 12px 30px rgba(0,0,0,.2);
 }
 
 .cart-shop svg {
-  width: 22px;
-  height: 22px;
+  width: 21px;
+  height: 21px;
 
   fill: none;
 
@@ -397,9 +383,6 @@ a{
    ========================================================= */
 
 .hero-card {
-  position: relative;
-  z-index: 2;
-
   width: 100%;
 
   height: 430px;
@@ -408,19 +391,12 @@ a{
 
   border-radius: 28px;
 
-  border: 1px solid rgba(255, 255, 255, .35);
+  border: 1px solid rgba(255,255,255,.35);
 
   background: #8d0909;
 
   box-shadow:
-    0 25px 70px rgba(0, 0, 0, .30);
-}
-
-.hero-card picture {
-  display: block;
-
-  width: 100%;
-  height: 100%;
+    0 25px 70px rgba(0,0,0,.30);
 }
 
 .hero-card img {
@@ -442,18 +418,19 @@ a{
 @media (max-width: 900px) {
 
   .hero {
-    padding-top: 100px;
-    padding-bottom: 60px;
+    padding: 100px 0 60px;
   }
 
   .hero-inner {
-    width: min(94%, 760px);
+    width: 92%;
 
     grid-template-columns: 1fr;
 
-    gap: 35px;
+    gap: 30px;
+  }
 
-    min-height: auto;
+  .hero-card {
+    height: 360px;
   }
 
   .hero-copy {
@@ -462,18 +439,6 @@ a{
 
   .hero-card {
     order: 1;
-
-    height: 360px;
-  }
-
-  .hero h1 {
-    font-size: clamp(48px, 9vw, 68px);
-  }
-
-  .hero p {
-    max-width: 680px;
-
-    font-size: 17px;
   }
 }
 
@@ -485,10 +450,7 @@ a{
 @media (max-width: 700px) {
 
   .hero {
-    min-height: auto;
-
-    padding-top: 88px;
-    padding-bottom: 48px;
+    padding: 85px 0 45px;
   }
 
   .hero-inner {
@@ -498,19 +460,15 @@ a{
 
     flex-direction: column;
 
-    gap: 26px;
-
-    min-height: auto;
+    gap: 25px;
   }
 
   .hero-card {
     order: 1;
 
-    width: 100%;
+    height: 280px;
 
-    height: 300px;
-
-    border-radius: 22px;
+    border-radius: 20px;
   }
 
   .hero-copy {
@@ -524,17 +482,17 @@ a{
 
     font-size: 10px;
 
-    letter-spacing: .13em;
+    letter-spacing: .12em;
   }
 
   .hero h1 {
     margin-bottom: 18px;
 
-    font-size: clamp(43px, 12vw, 58px);
+    font-size: 46px;
 
-    line-height: .94;
+    line-height: .95;
 
-    letter-spacing: -0.035em;
+    letter-spacing: -.035em;
   }
 
   .hero p {
@@ -548,8 +506,6 @@ a{
   }
 
   .cart-shop {
-    min-height: 48px;
-
     padding: 13px 22px;
 
     font-size: 14px;
@@ -564,36 +520,23 @@ a{
 @media (max-width: 480px) {
 
   .hero {
-    padding-top: 82px;
-    padding-bottom: 42px;
+    padding-top: 80px;
   }
 
   .hero-inner {
     width: 92%;
-
-    gap: 24px;
   }
 
   .hero-card {
-    height: 270px;
-
-    border-radius: 20px;
-  }
-
-  .hero-card img {
-    object-position: center;
+    height: 250px;
   }
 
   .hero h1 {
-    font-size: 46px;
-
-    line-height: .94;
+    font-size: 43px;
   }
 
   .hero p {
     font-size: 15.5px;
-
-    line-height: 1.55;
   }
 }
 
