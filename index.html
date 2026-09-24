@@ -1469,6 +1469,105 @@ h2{
   }
 }
 
+/* =========================================================
+   ADDRESS SECTION
+   ========================================================= */
+
+.address-section {
+  padding: 80px 0;
+  background: #fffaf0;
+}
+
+.section-heading {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 45px;
+}
+
+.section-heading .eyebrow {
+  color: #a40000;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.section-heading h2 {
+  margin: 0 0 12px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 42px;
+  color: #520000;
+}
+
+.section-heading p {
+  margin: 0;
+  color: #555;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.address-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+.address-card {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  padding: 30px;
+  background: #fff;
+  border: 1px solid #eadfca;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.06);
+}
+
+.address-icon {
+  font-size: 25px;
+  line-height: 1;
+}
+
+.address-card h3 {
+  margin: 0 0 10px;
+  color: #8d0000;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 23px;
+}
+
+.address-card p {
+  margin: 0;
+  color: #555;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+@media (max-width: 700px) {
+
+  .address-section {
+    padding: 60px 20px;
+  }
+
+  .section-heading h2 {
+    font-size: 34px;
+  }
+
+  .address-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .address-card {
+    padding: 24px;
+  }
+
+  .address-card h3 {
+    font-size: 21px;
+  }
+}
 
 </style>
 </head>
@@ -2549,6 +2648,50 @@ h2{
 
  </div>
 
+</section>
+
+<!-- =========================================================
+     ADDRESS
+     ========================================================= -->
+
+<section class="address-section" id="address">
+  <div class="container">
+
+    <div class="section-heading">
+      <div class="eyebrow">Our Locations</div>
+      <h2>Visit Marolls Rice</h2>
+      <p>Our corporate office and rice processing operation.</p>
+    </div>
+
+    <div class="address-grid">
+
+      <div class="address-card">
+        <div class="address-icon">📍</div>
+        <div>
+          <h3>Processing Facility</h3>
+          <p>
+            Plot 5, Ijedeaka Okweka Road,<br>
+            Idjerhe Kingdom,<br>
+            Delta State, Nigeria.
+          </p>
+        </div>
+      </div>
+
+      <div class="address-card">
+        <div class="address-icon">📍</div>
+        <div>
+          <h3>Lagos Office</h3>
+          <p>
+            House 6A, Road 13,<br>
+            Victory Park Estate,<br>
+            Osapa, Lagos, Nigeria.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
 </section>
 
 </main>
