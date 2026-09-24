@@ -707,6 +707,94 @@ color:#d9a62a;
   }
 }
 
+
+/* =========================================================
+   MOVING GALLERY
+   ========================================================= */
+
+.gallery {
+  width: 100%;
+  overflow: hidden;
+  background: #160303;
+  padding: 70px 0;
+}
+
+.gallery-track {
+  display: flex;
+  width: max-content;
+  gap: 22px;
+  animation: galleryMove 35s linear infinite;
+}
+
+.gallery-track img {
+  display: block;
+  width: 360px;
+  height: 250px;
+  flex: 0 0 360px;
+  object-fit: cover;
+  border-radius: 24px;
+}
+
+@keyframes galleryMove {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+
+/* =========================================================
+   MOBILE GALLERY
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  .gallery {
+    width: 100%;
+    padding: 45px 0;
+    overflow: hidden;
+  }
+
+  .gallery-track {
+    gap: 14px;
+  }
+
+  .gallery-track img {
+    width: 330px;
+    height: 230px;
+    flex-basis: 330px;
+    border-radius: 20px;
+  }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  .gallery {
+    padding: 40px 0;
+  }
+
+  .gallery-track {
+    gap: 12px;
+  }
+
+  .gallery-track img {
+    width: 300px;
+    height: 210px;
+    flex-basis: 300px;
+    border-radius: 18px;
+  }
+}
+
+XXXXXX
+
 /* GALLERY */
 
 .marquee{
